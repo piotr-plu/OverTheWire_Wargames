@@ -1,0 +1,76 @@
+# ==== level_0.txt ====
+# 18/08/2025
+ls
+cat readme
+
+# ==== level_1.txt ====
+# 18/08/25
+ls -la
+cat ./-
+
+# ==== level_2.txt ====
+# 18/08/2025
+cat ./'--spaces in this filename--' 
+
+# ==== level_3.txt ====
+# 18/08/2025
+ls -la
+cat inhere/'...Hiding-From-You'
+
+# ==== level_4.txt ====
+# 18/08/2025
+cd /inhere
+file ./*
+cat ./-file07
+
+# ==== level_5.txt ====
+# 18/08/2025
+find inhere/ -type f ! -executable -size 1033c -exec cat {} \;
+
+# ==== level_6.txt ====
+# 18/06/2025
+find / -type f -user bandit7 -group bandit6 -size 33c -exec cat {} \; 2>/dev/null
+
+# ==== level_7.txt ====
+# 18/08/2025
+cat data.txt | grep millionth
+
+# ==== level_8.txt ====
+# 18/08/2025
+sort data.txt | uniq -u 
+
+# ==== level_9.txt ====
+# 18/08/2025
+strings data.txt | grep ===
+
+# ==== level 10 ====
+# 18/08/2025
+base64 -d data.txt 
+
+# ==== level 11 =====
+# 18/08/2025
+cat data.txt | tr 'A-Za-z' 'N-ZA-Mn-za-m'
+
+#==== level 12 ====
+# 18/08/2025
+file zadanie12.bin
+mv zadanie12.bin zadanie12.gz
+gzip -d zadanie12.gz 
+mv zadanie12 zadanie12.bz2
+bzip2 -d zadanie12.bz2 
+mv zadanie12 zadanie12.gz
+gzip -d zadanie12.gz 
+mv zadanie12 zadanie12.tar
+tar -x -f zadanie12.tar
+file data5.bin 
+mv data5.bin data5.tar
+tar -x -f data5.tar
+mv data6.bin data6.bz2
+bzip2 -d data6.bz2
+mv data6 data6.tar
+tar -x -f data6.tar 
+mv data8.bin data8.gz
+gzip -d data8.gz 
+cat data8
+
+
