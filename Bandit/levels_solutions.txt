@@ -1,0 +1,194 @@
+# ==== level_0.txt ====
+# 18/08/2025
+ls
+cat readme
+
+# ==== level_1.txt ====
+# 18/08/25
+ls -la
+cat ./-
+
+# ==== level_2.txt ====
+# 18/08/2025
+cat ./'--spaces in this filename--' 
+
+# ==== level_3.txt ====
+# 18/08/2025
+ls -la
+cat inhere/'...Hiding-From-You'
+
+# ==== level_4.txt ====
+# 18/08/2025
+cd /inhere
+file ./*
+cat ./-file07
+
+# ==== level_5.txt ====
+# 18/08/2025
+find inhere/ -type f ! -executable -size 1033c -exec cat {} \;
+
+# ==== level_6.txt ====
+# 18/06/2025
+find / -type f -user bandit7 -group bandit6 -size 33c -exec cat {} \; 2>/dev/null
+
+# ==== level_7.txt ====
+# 18/08/2025
+cat data.txt | grep millionth
+
+# ==== level_8.txt ====
+# 18/08/2025
+sort data.txt | uniq -u 
+
+# ==== level_9.txt ====
+# 18/08/2025
+strings data.txt | grep ===
+
+# ==== level 10 ====
+# 18/08/2025
+base64 -d data.txt 
+
+# ==== level 11 =====
+# 18/08/2025
+cat data.txt | tr 'A-Za-z' 'N-ZA-Mn-za-m'
+
+#==== level 12 ====
+# 18/08/2025
+file zadanie12.bin
+mv zadanie12.bin zadanie12.gz
+gzip -d zadanie12.gz 
+mv zadanie12 zadanie12.bz2
+bzip2 -d zadanie12.bz2 
+mv zadanie12 zadanie12.gz
+gzip -d zadanie12.gz 
+mv zadanie12 zadanie12.tar
+tar -x -f zadanie12.tar
+file data5.bin 
+mv data5.bin data5.tar
+tar -x -f data5.tar
+mv data6.bin data6.bz2
+bzip2 -d data6.bz2
+mv data6 data6.tar
+tar -x -f data6.tar 
+mv data8.bin data8.gz
+gzip -d data8.gz 
+cat data8
+
+# ==== level 13 ====
+# 19/08/2025
+ssh -i sshkey.private -p 2220 bandit14@bandit.labs.overthewire.org
+cat /etc/bandit_pass/bandit14
+
+# ==== level 14 ====
+# 19/08/2025
+nc localhost 30000
+<send password for level 14>
+
+# ==== level 15 ====
+# 19/08/2025
+openssl s_client -quiet -connect localhost:30001 -servername localhost
+<send password for level 15>
+
+# ==== level 16 ====
+# 19/08/2025
+nc -zv localhost 31000-32000 2>&1 | grep succeeded
+nmap -v -p31046,31518,31691,31790,31960 -sV --open localhost
+ncat --ssl localhost 31790
+
+# ==== level 17 ====
+# 19/08/2025
+grep -Fvxf passwords.old passwords.new
+OR
+diff passwords.new passwords.old
+
+# ==== level 18 ====
+# 19/08/2025
+ssh -p 2220 bandit18@bandit.labs.overthewire.org 'cat readme'
+
+# ==== level 19 ====
+# 19/08/2025
+./bandit20-do cat /etc/bandit_pass/bandit20
+
+# ==== level 20 ====
+# 19/08/2025
+tmux new -s script
+tmux new -s lisener
+[lisener]: nc -lnvp 10000
+[script]: ./suconnect 10000
+[lisenser]: <send password for level 19>
+
+# ==== level 21 ====
+# 19/08/2025
+cat /etc/cron.d/cronjob_bandit22
+cat /usr/bin/cronjob_bandit22.sh
+cat /tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv
+
+# ==== level 22 ====
+# 19/08/2025
+cat /etc/cron.d/cronjob_bandit23
+cat /usr/bin/cronjob_bandit23.sh
+cat /tmp/$(echo I am user bandit23 | md5sum | cut -d' ' -f1)
+
+# ==== level 23 ====
+# 19/08/2025
+cat /etc/cron.d/cronjob_bandit24
+cat /usr/bin/cronjob_bandit24.sh
+cat > /var/spool/bandit24/foo/passscript.sh << 'EOF'
+#!/bin/bash
+cat /etc/bandit_pass/bandit24 > /tmp/pass_bandit24_$(whoami).txt
+EOF
+chmod +x /var/spool/bandit24/foo/passscript.sh
+cat /tmp/pass_bandit24_bandit24.txt
+
+# ==== level 24 ====
+# 19/08/2025
+
+#!/bin/bash
+coproc nc localhost 30002
+for i in $(seq 0 9999); do
+  echo "gb8KRRCsshuZXI0tUuR6ypOFjiZbf3G8 $i" >&"${COPROC[1]}"
+  read -r reply <&"${COPROC[0]}"
+    if [[ ! $reply == *"Wrong"* ]]; then
+      echo "$i : $reply"
+    fi
+done
+
+# ==== level 25 ====
+# 19/08/2025
+ssh -i bandit26.sshkey -p 2220 bandit26@localhost
+cat /etc/passwd | grep bandit26
+<resize terminal to very small>
+ssh -i bandit26.sshkey -p 2220 bandit26@localhost
+<start v and use command :set shell=/bin/bash, :shell>
+cat /etc/bandit_pass/bandit26
+
+# ==== level 26 ====
+# 19/08/2025
+./bandit27-do cat /etc/bandit_pass/bandit27
+
+# ==== level 27 ====
+# 19/08/2025
+mktemp -d
+git clone "ssh://bandit27-git@localhost:2220/home/bandit27-git/repo" /tmp/tmp.tipXfBx3GN
+cat /tmp/tmp.tipXfBx3GN/README
+
+# ==== level 28 ====
+# 19/08/2025
+TMPDIR=$(mktemp -d)
+git clone "ssh://bandit28-git@localhost:2220/home/bandit28-git/repo" $TMPDIR
+git log
+git show 68314e012fbaa192abfc9b78ac369c82b75fab8f
+
+# ==== level 29 ====
+# 19/08/2025
+TMPDIR=$(mktemp -d)
+git clone "ssh://bandit29-git@localhost:2220/home/bandit29-git/repo" $TMPDIR
+git branch -a
+it show origin/dev:README.md
+
+# ==== level 30 ====
+# 19/08/2025
+TMPDIR=$(mktemp -d)
+git clone "ssh://bandit30-git@localhost:2220/home/bandit30-git/repo" $TMPDIR
+git taggit show secret
+
+
